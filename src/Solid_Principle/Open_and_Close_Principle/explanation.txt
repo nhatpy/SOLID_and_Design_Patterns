@@ -1,0 +1,2 @@
+Nguyên tắc này có nghĩa là một class nên được thiết kế để khi mở rộng mà ta không tác động đến class cũ trước đó
+Cách giải quyết thường là sử dụng interface hoặc abstract class để định nghĩa các hành vi và ta sử dụng các implementation cụ thể cho từng hành vi

@@ -1,0 +1,2 @@
+Nguyên tắc này nói rằng các lớp con khi kế thừa từ lớp cha có thể thay thế lớp cha nhưng mà không làm thay đổi hành vi, hay tính đúng đắn của lớp cha, chương trình. 
+Điều này có nghĩa là các lớp con phải tuân theo các quy tắc và hành vi của lớp cha mà không làm thay đổi chúng.

@@ -1,0 +1,1 @@
+Hiểu nôm na thì nguyên tắc này có nghĩa là một class chỉ nên có 1 trách nhiệm duy nhất

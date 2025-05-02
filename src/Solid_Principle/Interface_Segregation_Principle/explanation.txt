@@ -1,0 +1,5 @@
+Nguyên tắc này đề xuất rằng các lớp không nên bị buộc phải triển khai các phương thức mà chúng không sử dụng. 
+Điều này có nghĩa là các giao diện nên được chia nhỏ thành các giao diện nhỏ hơn và cụ thể hơn, thay vì có một giao diện lớn với nhiều phương thức không liên quan.
+
+Nó khá giống với nguyên tắc Single Responsibility Principle (SRP), nơi mà mỗi lớp chỉ nên có một lý do để thay đổi.
+Nguyên tắc này giúp giảm thiểu sự phụ thuộc giữa các lớp và làm cho mã dễ bảo trì hơn.

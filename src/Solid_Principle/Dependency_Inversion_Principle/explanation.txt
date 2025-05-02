@@ -1,0 +1,18 @@
+Nguyên tắc này đề xuất rằng các thành phần cấp cao không nên phụ thuộc vào các thành phần cấp thấp. 
+Thay vào đó, cả hai nên phụ thuộc vào các trừu tượng (interface hoặc abstract class).
+
+Hiểu một cách đơn giản là ta cần trườu u tượng hóa các thành phần cấp cao và cấp thấp để chúng không phụ thuộc vào nhau.
+
+Ví dụ như sau:
+
+    - Ta có một service "DataPersistence" có nhiệm vụ lưu trữ dữ liệu vào database.
+    - Cơ sỡ dữ liệu hiện tại của ta là MongoDB (trong tương lai có thể là MySQL hoặc PostgreSQL chẳng hạn).
+
+    - Bây giờ ta thiết kế function "saveData" có nhận vào tham số là một MongoDB object (bao gồm ObjectId chẳng hạn)
+    - Như vậy, giả sử sau này ta muốn chuyển sang MySQL, ta phải implement lại function "saveData" với tham số là MySQL object (vì MySQL không có ObjectId).
+    - Như vậy, ta đã vi phạm nguyên tắc Dependency Inversion Principle.
+
+Cách khắc phục là ta cần giao tiếp các lớp thông qua các interface hoặc abstract class.
+    - Ta tạo một interface "Database" với các phương thức như "save", "delete", "update"...
+    - Sau đó, ta implement interface này cho các class MongoDB, MySQL, PostgreSQL...
+    - Cuối cùng, ta chỉ cần truyền vào tham số là interface "Database" trong function "saveData".
