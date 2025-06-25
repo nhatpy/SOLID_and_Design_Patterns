@@ -1,10 +1,13 @@
+package Call_Api;
+
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class App {
-    public static void main(String[] args) throws Exception {
+public class CallApi {
+    public static void main(String[] args) throws URISyntaxException {
         String uri = "https://jsonplaceholder.typicode.com/posts";
         HttpClient client = HttpClient.newHttpClient();
 
